@@ -2,7 +2,7 @@ namespace CursoEFCore.ValueObjects
 {
   public enum TipoProduto
   {
-    MercadoraParaRevenda,
+    MercadoriaParaRevenda,
     Embalagem,
     Servico,
   }
