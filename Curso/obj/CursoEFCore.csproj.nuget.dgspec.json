@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\camila_090122\\Curso\\CursoEFCore.csproj": {}
+    "C:\\Users\\camila_090122\\efcore\\Curso\\CursoEFCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\camila_090122\\Curso\\CursoEFCore.csproj": {
+    "C:\\Users\\camila_090122\\efcore\\Curso\\CursoEFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camila_090122\\Curso\\CursoEFCore.csproj",
+        "projectUniqueName": "C:\\Users\\camila_090122\\efcore\\Curso\\CursoEFCore.csproj",
         "projectName": "CursoEFCore",
-        "projectPath": "C:\\Users\\camila_090122\\Curso\\CursoEFCore.csproj",
+        "projectPath": "C:\\Users\\camila_090122\\efcore\\Curso\\CursoEFCore.csproj",
         "packagesPath": "C:\\Users\\camila_090122\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camila_090122\\Curso\\obj\\",
+        "outputPath": "C:\\Users\\camila_090122\\efcore\\Curso\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

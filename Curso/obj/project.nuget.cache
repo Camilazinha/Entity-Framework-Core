@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fUFGA7OEL/Y=",
+  "dgSpecHash": "jYYIXP3su4w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\camila_090122\\Curso\\CursoEFCore.csproj",
+  "projectFilePath": "C:\\Users\\camila_090122\\efcore\\Curso\\CursoEFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\camila_090122\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\camila_090122\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
