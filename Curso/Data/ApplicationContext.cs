@@ -12,7 +12,7 @@ namespace CursoEFCore.Data
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlServer("Data source=");
+      optionsBuilder.UseSqlServer("Server=dsis.fieb.local\\dev;Database=Curso_EFCore_Camila;Trusted_Connection=True;TrustServerCertificate=True;");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
