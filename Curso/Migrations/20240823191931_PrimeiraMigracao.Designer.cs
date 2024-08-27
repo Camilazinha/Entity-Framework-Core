@@ -149,7 +149,7 @@ namespace CursoEFCore.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("VARCHAR(60");
+                        .HasColumnType("VARCHAR(60)");
 
                     b.Property<string>("TipoProduto")
                         .IsRequired()

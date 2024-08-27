@@ -1,6 +1,8 @@
 using CursoEFCore.Data.Configurations;
 using CursoEFCore.Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+
 
 namespace CursoEFCore.Data
 {
@@ -12,7 +14,9 @@ namespace CursoEFCore.Data
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlServer("Server=dsis.fieb.local\\dev;Database=Curso_EFCore_Camila;Trusted_Connection=True;TrustServerCertificate=True;");
+      optionsBuilder
+      .LogTo(Console.WriteLine, LogLevel.Information)
+      .UseSqlServer("Server=dsis.fieb.local\\dev;Database=Curso_EFCore_Camila;Trusted_Connection=True;TrustServerCertificate=True;");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
