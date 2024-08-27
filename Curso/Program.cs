@@ -24,7 +24,44 @@ namespace CursoEFCore
       // InserirDadosEmMassa();
       // ConsultarDados();
       // CadastrarPedido();
-      ConsultarPedidoCarregamentoAdiantado();
+      // ConsultarPedidoCarregamentoAdiantado();
+      // AtualizarDados();
+      RemoverRegistro();
+    }
+
+    private static void RemoverRegistro()
+    {
+      using var db = new Data.ApplicationContext();
+      // var cliente = db.Clientes.Find(2);
+      var cliente = new Cliente { Id = 3 };
+      // db.Clientes.Remove(cliente);
+      // db.Remove(cliente);
+      db.Entry(cliente).State = EntityState.Deleted;
+
+      db.SaveChanges();
+    }
+    private static void AtualizarDados()
+    {
+      using var db = new Data.ApplicationContext();
+      // var cliente = db.Clientes.Find(1);
+
+      var cliente = new Cliente
+      {
+        Id = 1
+      };
+
+      var clienteDesconectado = new
+      {
+        Nome = "Cliente Desconectado Passo 3",
+        Telefone = "7966669999"
+      };
+
+      db.Attach(cliente);
+      db.Entry(cliente).CurrentValues.SetValues(clienteDesconectado);
+      cliente.Nome = "Cliente Alterado Passo 2";
+      // db.Clientes.Update(cliente);
+
+      db.SaveChanges();
     }
 
     private static void ConsultarPedidoCarregamentoAdiantado()
@@ -118,7 +155,7 @@ namespace CursoEFCore
       using var db = new Data.ApplicationContext();
       // db.AddRange(produto, cliente);
 
-      // db.Clientes.AddRange(listaClientes);
+      db.Clientes.AddRange(listaClientes);
 
       db.Set<Cliente>().AddRange(listaClientes);
 
