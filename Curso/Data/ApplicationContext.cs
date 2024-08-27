@@ -16,7 +16,10 @@ namespace CursoEFCore.Data
     {
       optionsBuilder
       .LogTo(Console.WriteLine, LogLevel.Information)
-      .UseSqlServer("Server=dsis.fieb.local\\dev;Database=Curso_EFCore_Camila;Trusted_Connection=True;TrustServerCertificate=True;");
+      .UseSqlServer("Server=dsis.fieb.local\\dev;Database=Curso_EFCore_Camila;Trusted_Connection=True;TrustServerCertificate=True;", p => p.EnableRetryOnFailure(
+        maxRetryCount: 2,
+        maxRetryDelay: TimeSpan.FromSeconds(5),
+        errorNumbersToAdd: null));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
