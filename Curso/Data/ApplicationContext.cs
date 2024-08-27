@@ -19,7 +19,7 @@ namespace CursoEFCore.Data
       .UseSqlServer("Server=dsis.fieb.local\\dev;Database=Curso_EFCore_Camila;Trusted_Connection=True;TrustServerCertificate=True;", p => p.EnableRetryOnFailure(
         maxRetryCount: 2,
         maxRetryDelay: TimeSpan.FromSeconds(5),
-        errorNumbersToAdd: null));
+        errorNumbersToAdd: null).MigrationsHistoryTable("curso_ef_core"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
